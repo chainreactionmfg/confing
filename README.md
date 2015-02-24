@@ -21,9 +21,9 @@ $ pip install --editable .
 
 
 ## Contributing
-Anyone can help make this project better - read [CONTRIBUTION][CONTRIBUTION.md] to get started!
+Anyone can help make this project better - read [CONTRIBUTION](CONTRIBUTION.md) to get started!
 
 
 ## License
-MIT. See the [LICENSE](LICENSE) file for more details.
+Apache 2.0. See the [LICENSE](LICENSE) file for more details.
 
