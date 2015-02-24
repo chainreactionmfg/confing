@@ -25,7 +25,7 @@ __title__ = 'confing'
 __summary__ = 'Described configuration for large, complex projects'
 __uri__ = 'https://github.com/fahhem/confing'
 
-__version__ = '0.0.1'
+__version__ = '0.1.0'
 
 __author__ = 'Fahrzin Hemmati'
 __email__ = 'fahhem@chainreactionmfg.com'
