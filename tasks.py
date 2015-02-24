@@ -3,7 +3,8 @@
 from __future__ import print_function
 
 from invoke import run, task
-from invoke.util import log
+from invoke.util import log, enable_logging
+enable_logging()
 
 
 @task
@@ -24,10 +25,10 @@ def clean():
   run('rm -rf build/')
   run('rm -rf dist/')
   run('rm -rf confing.egg-info')
-  run('find . -name __pycache__ -delete')
   run('find . -name *.pyc -delete')
   run('find . -name *.pyo -delete')
   run('find . -name *~ -delete')
+  run('find . -name __pycache__ -delete')
 
   log.info('cleaned up')
 
@@ -48,9 +49,14 @@ def coverage():
 
 
 @task(clean)
-def publish():
-  """publish - package and upload a release to the cheeseshop."""
-  run('python setup.py sdist upload', pty=True)
-  run('python setup.py bdist_wheel upload', pty=True)
+def start_publish():
+  """start_publish - package a release for the cheeseshop."""
+  run('python setup.py sdist bdist_wheel', pty=True)
+  log.info('Packaged release 0.1.1')
 
+
+@task(clean)
+def finish_publish():
+  """publish - upload the release to the cheeseshop."""
+  run('twine upload dist/confing-0.1.1*')
   log.info('published new release')
