@@ -1,0 +1,21 @@
+# config file for automatic testing at travis-ci.org
+language: python
+
+sudo: false
+
+python:
+  - "3.4"
+
+install:
+  # install dependencies
+  - pip install -r requirements/development.txt
+
+  # install your own package + executables
+  - pip install --editable .
+
+script:
+  # command to run tests and collect test coverage
+  - python setup.py test --pytest-cov html
+
+after_success:
+  coveralls

@@ -1,0 +1,12 @@
+site_name: Cara
+pages:
+  - [index.md, Home]
+  - [contributing.md, Contributing]
+theme: readthedocs
+
+site_url: http://confing.readthedocs.org/en/latest/
+repo_url: https://github.com/chainreactionmfg/confing
+repo_name: 'GitHub'
+site_description: "confing is Described Configuration"
+site_author: "Fahrzin Hemmati, Chain Reaction Mfg"
+copyright: "2015, Fahrzin Hemmati, Chain Reaction Mfg"
