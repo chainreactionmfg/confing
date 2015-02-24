@@ -45,7 +45,7 @@ class Confer(object):
   def loaded(self):
     return self._loaded
 
-  def AsCallable(self, attr):
+  def as_callable(self, attr):
     def ConfigCallable():
       if self._loaded is None:
         raise ValueError('Config is not loaded yet.')

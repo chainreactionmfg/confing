@@ -45,7 +45,7 @@ class TestConfing(unittest.TestCase):
   def test_callable(self):
     confer = confing.getConfer('tests')
     confer.define(data.Int(name='with_doc').Doc('Just a test int'))
-    callable = confer.AsCallable('with_doc')
+    callable = confer.as_callable('with_doc')
 
     with self.assertRaises(ValueError):
       callable()
