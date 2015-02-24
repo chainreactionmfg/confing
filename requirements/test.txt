@@ -1,2 +1,5 @@
+coveralls
+flake8
+tox
 pytest
 pytest-cov
