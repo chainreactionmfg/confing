@@ -51,7 +51,7 @@ with open(os.path.join(here, 'requirements.txt')) as req:
 
 setup(
     name='confing',
-    version='0.1.0',
+    version='0.1.1',
     description='Described configuration for large, complex projects',
     long_description=long_description,
     keywords='confing development',
