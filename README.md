@@ -49,7 +49,7 @@ time or before the config is loaded, you can pass it a callable that will be
 the correct value once the config is loaded later. This will only work if the
 receiving party doesn't attempt to resolve the value before the config is loaded.
 
-``python
+```python
 confer.as_callable('secret_key')
 ```
 
